@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # python manage.py makemigrations : commit 해주는 역할
+    # python manage.py migrate : push 역할 / 적용 됨.
     "home",
+    "todo",
 ]
 
 MIDDLEWARE = [
