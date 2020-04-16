@@ -12,3 +12,8 @@ class Todo(models.Model):
     task = models.CharField(max_length=200, null=False,
                             help_text=" 할 일을 채워주세요!")
     is_done = models.BooleanField(default=False)
+
+    # ___str___ ?? : 클래스의 객체(인스턴스) 안에
+    # self 자리에 인스턴스가 들어감.
+    def __str__(self):
+        return self.task

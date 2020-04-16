@@ -59,7 +59,7 @@ ROOT_URLCONF = 'donghee_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'home/', 'template')],
+        'DIRS': [os.path.join(BASE_DIR, 'home/', 'template'), os.path.join(BASE_DIR, 'todo/', 'template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
