@@ -20,6 +20,7 @@ from home.views import quote_view
 from home.views import var_view
 from home.views import nums_view
 from todo.views import todo_view
+from todo.views import todo_progress_view
 
 from django.conf.urls.static import static
 
@@ -31,6 +32,7 @@ urlpatterns = [
     path('num/', nums_view),
 
     path('todos/', todo_view, name="todos"),
+    path('todos/in_progress', todo_progress_view, name="todos_in_progress"),
 
 
 ]
