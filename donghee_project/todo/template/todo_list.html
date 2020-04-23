@@ -1,23 +1,16 @@
 <html>
 
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>To-do 목록</th>
-                <th>완료했나요?</th>
-            </tr>
+    <form method="POST">
+        {% csrf_token %}{{ form.as_p }}
+        <button type="submit">추가</button>
 
-        </thead>
-        {% for todo in todos %}
-        <thead>
-            <tr>
-                <th>{{todo.task}}</th>
-                <th>{{todo.is_done}}</th>
-            </tr>
-        </thead>
-        {% endfor %}
-    </table>
+    </form>
+
+    {% for todo in todos %}
+    <p>{{todo.task}} | <a href="{% url 'todo_del' pk=todo.pk %}">삭제</a></p>
+    {% endfor %}
+
 </body>
 
 </html>

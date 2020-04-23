@@ -21,6 +21,7 @@ from home.views import var_view
 from home.views import nums_view
 from todo.views import todo_view
 from todo.views import todo_progress_view
+from todo.views import delete_todo
 
 from django.conf.urls.static import static
 
@@ -33,6 +34,7 @@ urlpatterns = [
 
     path('todos/', todo_view, name="todos"),
     path('todos/in_progress', todo_progress_view, name="todos_in_progress"),
+    path('todos/<pk>/delete', delete_todo, name="todo_del"),
 
 
 ]
